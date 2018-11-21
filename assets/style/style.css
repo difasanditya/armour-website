@@ -1,9 +1,14 @@
-@font-face{
+@font-face {
     font-family: "Armour";
     src: url("../text/Armour.ttf");
 }
 
-html{
+@font-face {
+    font-family: "Hammersmith One";
+    src: url("../text/HammersmithOne-Regular.ttf");
+}
+
+html {
     /* background-color: #2e86de; */
     background: url("../picture/armour.jpg");
     background-size: cover;
@@ -15,7 +20,7 @@ html{
     z-index: 1;
 }
 
-html::before{
+html::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +31,7 @@ html::before{
     z-index: -1;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -34,26 +39,71 @@ body{
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-family: "Armour";
     margin: 0;
     font-size: 3em;
     text-transform: lowercase;
 }
 
-a{
+h2 {
+    font-family: "Hammersmith One";
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: normal;
     color: #fff;
-    text-decoration: none;
     text-transform: lowercase;
 }
 
-header{
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
     position: fixed;
     z-index: 100;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 72px);
+    padding: 0 4%;
+    box-sizing: border-box;
+    top: 36px;
+    left: 36px;
+}
+
+header>#menu {
+    font-family: "Hammersmith One";
+    text-transform: lowercase;
+    text-align: right;
+}
+
+header>#menu>a {
+    margin: 0 8px;
+}
+
+section {
+    padding-top: 54px;
 }
 
 /* Fake Scroll */
 
-.fakeScroll__track{
+.fakeScroll__track {
     display: none;
+}
+
+/* Removing 000webhostapp Watermark */
+
+.fakeScroll__content>div {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: fixed !important;
+    left: -100% !important;
+    right: -100% !important;
+    overflow: hidden !important;
+    z-index: -9999999 !important;
 }
