@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Contact</title>
+    <script src="assets/script/jquery-3.2.1.min.js"></script>
+    <script src="assets/script/slick.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/slick.css">
+    <link rel="stylesheet" href="assets/style/contact.css">
+</head>
+
+<body>
+    <div id="slider">
+        <div class="item">
+            <div class="img">
+                <img src="assets/picture/contact/1.jpg">
+            </div>
+            <h3>#01 Mike Winn</h3>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="assets/picture/contact/2.jpg">
+            </div>
+            <h3>#02 Marc Benioff</h3>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="assets/picture/contact/3.jpg">
+            </div>
+            <h3>#03 David Sacks</h3>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="assets/picture/contact/4.jpg">
+            </div>
+            <h3>#04 Josh Reeves</h3>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="assets/picture/contact/5.jpg">
+            </div>
+            <h3>#05 Rob Reid</h3>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="assets/picture/contact/6.jpg">
+            </div>
+            <h3>#06 Kieran Snyder</h3>
+        </div>
+    </div>
+    <div id="profile">
+        <h4>"Quotes here"</h4>
+        <h2>Mike Winn</h2>
+        <p>Mike</p>
+        <p>27 September</p>
+        <p>New York</p>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github-square"></i>
+    </div>
+</body>
+<script>
+    $("#slider").on("afterChange", function(event, slick, currentSlide){
+        //animate?
+    });
+    $("#slider").on("beforeChange", function(event, slick, currentSlide, nextSlide){
+        //animate?
+    });
+    $("#slider").slick({
+        centerMode: true,
+        // infinite: false,
+        slidesToScroll: 1,
+        variableWidth: true
+    });
+</script>
+
+</html>
