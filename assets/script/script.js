@@ -1,8 +1,7 @@
 $(document).ready(function(){
-    document.querySelector("body").fakeScroll();
-    // if($(".fakeScroll__content > div").length) $(".fakeScroll__content > div").remove();
+    document.querySelector("#console").fakeScroll();
     var typed = new Typed('#typed', {
-        strings: ["Hello World!", "Welcome to Armour Website", "Scroll down to continue!", "Or do whatever you want^1000, lol"],
+        strings: ["Hello World!", "Welcome to Armour Website", "Scroll down to continue!", "Or click the link above", "Or do whatever you want^800, lol"],
         loop: true,
         loopCount: Infinity,
         typeSpeed: 35,
