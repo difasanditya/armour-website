@@ -44,34 +44,35 @@ h6 {
     color: #fff;
 }
 
-p {
-    margin: 0;
+h1{
+    text-align: center;
+    font-size: 2.5em;
 }
 
-.underline {
-    position: relative;
+p {
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: #0073aa;
-    margin: 0 4px;
+}
+
+a::before,
+a::after{
+    font-family: "Silkscreen", monospace;
+    transition: opacity .2s ease;
+    opacity: 0;
 }
 
 a::before{
     content: "[";
-    font-family: "Silkscreen", monospace;
     margin-right: 2px;
-    transition: opacity .2s ease;
-    opacity: 0;
 }
 
 a::after{
     content: "]";
-    font-family: "Silkscreen", monospace;
     margin-left: 2px;
-    transition: opacity .2s ease;
-    opacity: 0;
 }
 
 a.active::before,
@@ -81,30 +82,12 @@ a:hover::after{
     opacity: 1;
 }
 
-.underline:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1.5px;
-    bottom: -2px;
-    left: 0;
-    background-color: #fff;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.underline.active:before,
-.underline:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
 /* Console */
 
 #title {
     text-align: center;
     background-color: #f1f1f1;
+    color: #333;
     padding: 4px 0;
     font-family: "Hammersmith One";
     width: calc(100vw - 32px);
@@ -112,6 +95,7 @@ a:hover::after{
     border-radius: 4px 4px 0 0;
     z-index: 100;
     position: relative;
+    transition: all .2s ease;
 }
 
 #title::before {
@@ -144,9 +128,9 @@ a:hover::after{
     height: calc(100vh - 60px);
     margin: 0 auto 16px;
     border-radius: 0 0 4px 4px;
-    overflow: hidden;
     position: relative;
     font-family: "Silkscreen", monospace;
+    transition: all .2s ease;
 }
 
 #console::before {
@@ -165,12 +149,21 @@ a:hover::after{
 
 #header {
     color: #fff;
-    padding: 8px 0;
+    min-height: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #header>#logo {
     text-align: center;
     color: #374f64;
+}
+
+#header>#logo>p {
     font-family: "Droid Sans Mono", monospace;
     font-size: .5em;
 }
@@ -181,7 +174,11 @@ a:hover::after{
 
 #header>#menu {
     text-align: center;
-    margin: 10px 0 24px;
+    margin: 16px 0 32px;
+}
+
+#header>#menu>a{
+    margin: 0 4px;
 }
 
 #header>h1 {
@@ -189,17 +186,22 @@ a:hover::after{
     font-weight: normal;
 }
 
-/* About */
-
-#about {
-    text-align: center;
-    margin: 32px;
+#header>#down{
+    border: none;
+    background-color: transparent;
+    font-family: "Silkscreen", monospace;
+    color: #fff;
+    font-size: 2.5em;
+    cursor: pointer;
+    transform: rotate(90deg);
+    display: block;
+    margin: auto;
 }
 
 /* Footer */
 
 #footer {
-    padding: 8px 0;
+    padding: 16px;
     background-color: #23282d;
     color: #fff;
     text-align: center;
@@ -231,6 +233,14 @@ a:hover::after{
 
 /* Fake Scroll */
 
+.fakeScroll__content {
+    width: calc(100% + 18px);
+    padding: 0 30px 0 0;
+    position: relative;
+    right: 0px;
+    border-radius: 0 0 4px 4px;
+}
+
 .fakeScroll__track {
     right: 0;
     z-index: 1000;
@@ -249,14 +259,12 @@ a:hover::after{
 }
 
 .fakeScroll__bar.fakeScroll--grabbed {
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
     background: #f1f1f1;
 }
 
 /* Removing 000webhostapp Watermark */
 
-body>div {
+/* body>div {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -266,4 +274,4 @@ body>div {
     bottom: -100% !important;
     overflow: hidden !important;
     z-index: -9999999 !important;
-}
+} */

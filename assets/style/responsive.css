@@ -5,13 +5,24 @@
 }
 
 @media only screen and (max-width: 480px) {
+    #title {
+        width: calc(100vw - 16px);
+        margin: 8px auto 0;
+    }
+
+    #console {
+        width: calc(100vw - 16px);
+        height: calc(100vh - 44px);
+        margin: 0 auto 8px;
+    }
+
     #header>#menu {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
-    #header>#logo {
-        font-size: .4em;
+    #header>#logo>p {
+        font-size: .375em;
     }
 
     #header>#menu>a {
@@ -20,5 +31,18 @@
 
     #header>h1 {
         height: 4.5em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #title {
+        width: 100vw;
+        margin: 0;
+    }
+
+    #console {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
     }
 }
