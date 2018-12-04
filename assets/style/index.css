@@ -1,52 +1,65 @@
-/* Definition */
-
-h2{
-    color: #0073aa;
-    font-size: 2em;
-    margin-bottom: 8px;
+#console .fakeScroll__content > section {
+    margin: 64px 0;
 }
 
-h3 {
-    font-size: 1.5em;
-}
+/* About */
 
-#console section{
+#console .about{
     color: #fff;
     position: relative;
-}
-
-#console section.right {
-    text-align: right;
-    padding: 8px 38px 12px 20px;
-}
-
-#console section.left {
+    margin: 32px 0;
     text-align: left;
     padding: 8px 20px 12px 36px;
 }
 
-#console section::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 90%;
-    width: 4px;
-    background-color: #fff;
-    border-radius: 4px;
+#console .about:first-of-type {
+    margin-top: 0;
 }
 
-#console section.right::after {
+#console .about:last-of-type {
+    margin-bottom: 0;
+}
+
+#console .about:nth-of-type(odd) {
+    text-align: right;
+    padding: 8px 38px 12px 20px;
+}
+
+#console .about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 4px;
+    background-color: #fff;
+}
+
+#console .about:nth-of-type(odd)::after {
     right: 16px;
 }
 
-#console section.left::after {
+#console .about:nth-of-type(even)::after {
     left: 22px;
 }
 
-#definition > h3 > span {
-    font-size: 0.6em;
+/* Definition */
+
+#definition > #pronounce {
+    margin: 4px 0 0 0;
+    border: none;
+    background-color: transparent;
+    font-family: "Silkscreen", monospace;
+    font-size: 1em;
+    color: #fff;
     font-weight: normal;
+    cursor: pointer;
+    display: inline;
+}
+
+#definition > #pronounce > i {
+    font-size: .7em;
+    margin-right: 8px;
 }
 
 #definition > #pronounce > #a {
@@ -68,9 +81,41 @@ h3 {
 }
 
 #definition > #description {
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
-#logo{
+/* Logo */
 
+#logo > div{
+    margin: 16px 0;
+}
+
+#logo > div:first-of-type{
+    margin-top: 0;
+}
+
+#logo > div:last-of-type{
+    margin-bottom: 0;
+}
+
+#logo > div > h3 + p {
+    margin-top: 8px;
+}
+
+/* Member */
+
+#member{
+    text-align: center;
+}
+
+/* Project */
+
+#project{
+    text-align: center;
+}
+
+/* Say Hello */
+
+#form{
+    text-align: center;
 }

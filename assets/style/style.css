@@ -47,6 +47,22 @@ h6 {
 h1{
     text-align: center;
     font-size: 2.5em;
+    margin-bottom: 16px;
+}
+
+h2{
+    color: #0073aa;
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h3 > span {
+    font-size: 0.6em;
+    font-weight: normal;
 }
 
 p {
@@ -80,6 +96,67 @@ a.active::after,
 a:hover::before,
 a:hover::after{
     opacity: 1;
+}
+
+label{
+    font-family: "Silkscreen", monospace;
+    font-size: .8em;
+    color: #fff;
+}
+
+button,
+input[type=text],
+textarea{
+    padding: 4px 8px;
+    background-color: transparent;
+    font-family: "Silkscreen", monospace;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    display: block;
+    transition: all .2s ease;
+}
+
+button{
+    border: solid 2px #fff;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+button:hover{
+    color: #23282d;
+    background-color: #fff;
+}
+
+input[type=text],
+textarea{
+    width: 90%;
+    max-width: 360px;
+    border: none;
+    border-bottom: solid 2px #fff;
+    margin: 0 auto 32px;
+}
+
+input[type=text]:focus,
+textarea:focus{
+    border-bottom: solid 2px #0073aa;
+}
+
+input[type=text]{
+    position: relative;
+}
+
+textarea{
+    resize: none;
+}
+
+#pickled-bluewood {
+    color: #374f64;
+}
+
+#valencia-red {
+    color: #d54143;
 }
 
 /* Console */
@@ -174,7 +251,7 @@ a:hover::after{
 
 #header>#menu {
     text-align: center;
-    margin: 16px 0 32px;
+    margin: 32px 0;
 }
 
 #header>#menu>a{
@@ -264,7 +341,7 @@ a:hover::after{
 
 /* Removing 000webhostapp Watermark */
 
-/* body>div {
+body>div {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -274,4 +351,4 @@ a:hover::after{
     bottom: -100% !important;
     overflow: hidden !important;
     z-index: -9999999 !important;
-} */
+}
