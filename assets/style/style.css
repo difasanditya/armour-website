@@ -338,17 +338,3 @@ textarea{
 .fakeScroll__bar.fakeScroll--grabbed {
     background: #f1f1f1;
 }
-
-/* Removing 000webhostapp Watermark */
-
-body>div {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    width: 0 !important;
-    position: fixed !important;
-    left: -100% !important;
-    bottom: -100% !important;
-    overflow: hidden !important;
-    z-index: -9999999 !important;
-}
