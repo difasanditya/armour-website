@@ -1,121 +1,121 @@
 #console .fakeScroll__content > section {
-    margin: 64px 0;
+	margin: 64px 0;
 }
 
 /* About */
 
 #console .about{
-    color: #fff;
-    position: relative;
-    margin: 32px 0;
-    text-align: left;
-    padding: 8px 20px 12px 36px;
+	color: #fff;
+	margin: 32px 0;
+	padding: 8px 20px 12px 36px;
+	position: relative;
+	text-align: left;
 }
 
 #console .about:first-of-type {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 #console .about:last-of-type {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 #console .about:nth-of-type(odd) {
-    text-align: right;
-    padding: 8px 38px 12px 20px;
+	padding: 8px 38px 12px 20px;
+	text-align: right;
 }
 
 #console .about::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 4px;
-    background-color: #fff;
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: 4px;
 }
 
 #console .about:nth-of-type(odd)::after {
-    right: 16px;
+	right: 16px;
 }
 
 #console .about:nth-of-type(even)::after {
-    left: 22px;
+	left: 22px;
 }
 
 /* Definition */
 
 #definition > #pronounce {
-    margin: 4px 0 0 0;
-    border: none;
-    background-color: transparent;
-    font-family: "Silkscreen", monospace;
-    font-size: 1em;
-    color: #fff;
-    font-weight: normal;
-    cursor: pointer;
-    display: inline;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline;
+	font-family: "Silkscreen", monospace;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 4px 0 0 0;
 }
 
 #definition > #pronounce > i {
-    font-size: .7em;
-    margin-right: 8px;
+	font-size: .7em;
+	margin-right: 8px;
 }
 
 #definition > #pronounce > #a {
-    position: relative;
-    display: inline-block;
+	display: inline-block;
+	position: relative;
 }
 
 #definition > #pronounce > #a::after {
-    display: block;
-    content: "..";
-    position: absolute;
-    bottom: calc(100% - 6px);
-    right: .6px;
+	bottom: calc(100% - 6px);
+	content: "..";
+	display: block;
+	position: absolute;
+	right: .6px;
 }
 
 #definition > #pronounce > #e {
-    transform: scale(-1, -1);
-    display: inline-block;
+	display: inline-block;
+	transform: scale(-1, -1);
 }
 
 #definition > #description {
-    margin-top: 8px;
+	margin-top: 8px;
 }
 
 /* Logo */
 
 #logo > div{
-    margin: 16px 0;
+	margin: 16px 0;
 }
 
 #logo > div:first-of-type{
-    margin-top: 0;
+	margin-top: 0;
 }
 
 #logo > div:last-of-type{
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 #logo > div > h3 + p {
-    margin-top: 8px;
+	margin-top: 8px;
 }
 
 /* Member */
 
 #member{
-    text-align: center;
+	text-align: center;
 }
 
 /* Project */
 
 #project{
-    text-align: center;
+	text-align: center;
 }
 
 /* Say Hello */
 
 #form{
-    text-align: center;
+	text-align: center;
 }

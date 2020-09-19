@@ -1,82 +1,82 @@
 @keyframes placeHolderAnimation{
-    0%{
-        background-position: -160px 0
-    }
-    100%{
-        background-position: 160px 0
-    }
+	0%{
+		background-position: -160px 0
+	}
+	100%{
+		background-position: 160px 0
+	}
 }
 
 .loading-placeholder {
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: placeHolderAnimation;
-    animation-timing-function: linear;
-    background: linear-gradient(to right, #32373c 8%, #23282d 18%, #32373c 33%);
-    background-size: 200% 160px;
-    position: relative;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: placeHolderAnimation;
+	animation-timing-function: linear;
+	background: linear-gradient(to right, #32373c 8%, #23282d 18%, #32373c 33%);
+	background-size: 200% 160px;
+	position: relative;
 }
 
 #member {
-    padding: 16px
+	padding: 16px
 }
 
 #member > #members-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .member {
-    text-align: center;
-    width: 160px;
-    margin: 16px;
+	margin: 16px;
+	text-align: center;
+	width: 160px;
 }
 
 .member::before, .member::after{
-    content: "";
-    margin: 0;
+	content: "";
+	margin: 0;
 }
 
 .member > .member-picture {
-    background-color: #32373c;
-    width: 100%;
-    height: 160px;
-    border-radius: 4px;
+	background-color: #32373c;
+	border-radius: 4px;
+	height: 160px;
+	width: 100%;
 }
 
 .member > #picture-1.member-picture{
-    background: url("../picture/ava.png");
-    background-size: 100%;
+	background: url("../picture/ava.png");
+	background-size: 100%;
 }
 
 .member > .member-initial {
-    margin: 4px;
+	margin: 4px;
 }
 
 .member > .member-initial::before,
 .member > .member-initial::after{
-    font-family: "Silkscreen", monospace;
-    transition: opacity .2s ease;
-    opacity: 0;
+	font-family: "Silkscreen", monospace;
+	opacity: 0;
+	transition: opacity .2s ease;
 }
 
 .member > .member-initial::before{
-    content: "[";
-    margin-right: 2px;
+	content: "[";
+	margin-right: 2px;
 }
 
 .member > .member-initial::after{
-    content: "]";
-    margin-left: 2px;
+	content: "]";
+	margin-left: 2px;
 }
 
 .member:hover > .member-initial{
-    color: #0073aa;
+	color: #0073aa;
 }
 
 .member:hover > .member-initial::before,
 .member:hover > .member-initial::after{
-    opacity: 1;
+	opacity: 1;
 }
